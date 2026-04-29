@@ -1,4 +1,5 @@
 'use client'
+import { Button } from '@heroui/react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -7,7 +8,7 @@ const Navbar = () => {
     <nav className="w-full border-b bg-white">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
 
-        {/* LEFT - Logo */}
+        
         <div className="flex items-center">
           <Image
             src="/tiles/logo.png"
@@ -18,7 +19,7 @@ const Navbar = () => {
           />
         </div>
 
-        {/* CENTER - Menu */}
+       
         <div className="absolute left-1/2 -translate-x-1/2 flex gap-6 text-sm font-medium">
           <Link href="/" className="hover:text-blue-500">
             Home
@@ -31,14 +32,14 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* RIGHT - Auth Buttons */}
+        
         <div className="flex items-center gap-3">
-          <button className="px-4 py-1 border rounded-md hover:bg-gray-100">
+          <Button className="px-4 py-1 border rounded-md hover:bg-gray-500">
             Login
-          </button>
-          <button className="px-4 py-1 bg-black text-white rounded-md hover:bg-gray-800">
+          </Button>
+          <Button className="px-4 py-1 bg-black text-white rounded-md hover:bg-gray-800">
             Signup
-          </button>
+          </Button>
         </div>
 
       </div>
