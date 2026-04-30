@@ -3,7 +3,7 @@
     "id": "tile_001",
     "title": "Ceramic Blue Tile",
     "description": "Premium ceramic tile with blue glaze finish",
-    "image": "/tiles/image-1.jpg",
+    "image": "/tiles/image-1.jpg ",
     "category": "ceramic",
     "price": 45.99,
     "currency": "USD",
