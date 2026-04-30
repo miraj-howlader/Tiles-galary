@@ -1,3 +1,4 @@
+import { Chip } from '@heroui/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -25,8 +26,8 @@ const TilesCard = ({tile}) => {
                 {tile.title}
               </h3>
 
-              <p className="text-sm text-gray-500 mt-1">
-                {tile.category}
+              <p className="text-sm  mt-1">
+                <Chip color='success' className='text-green-500 font-bold'>{tile.category}</Chip>
               </p>
 
               <p className="mt-2 font-bold text-gray-900">
