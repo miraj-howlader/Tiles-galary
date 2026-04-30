@@ -1,22 +1,9 @@
 [
-
-    {
-    "id": "tile_007",
-    "title": "Glossy Red Tile",
-    "description": "High-gloss red ceramic tile",
-    "image": "/tiles/image-7.jpg",
-    "category": "ceramic",
-    "price": 42.3,
-    "currency": "USD",
-    "dimensions": "30x30 cm",
-    "material": "Ceramic",
-    "inStock": false
-  },
   {
     "id": "tile_001",
     "title": "Ceramic Blue Tile",
     "description": "Premium ceramic tile with blue glaze finish",
-    "image": "/tiles/image-1.jpg ",
+    "image": "/tiles/image-1.jpg",
     "category": "ceramic",
     "price": 45.99,
     "currency": "USD",
