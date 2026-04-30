@@ -29,7 +29,7 @@ const FeaturedTiles = async () => {
          
             <div className="relative w-full h-48">
               <Image
-                src={tile.image}
+                src={tile?.image}
                 alt={tile.title}
                 fill
                 className="object-cover"
