@@ -7,7 +7,7 @@ const FeaturedTiles = async () => {
 
   try {
     const res = await fetch("https://tiles-galary-swart.vercel.app/data.json", {
-      cache: "no-store", // important for fresh data
+      cache: "no-store", 
     })
 
     data = await res.json()
@@ -20,12 +20,12 @@ const FeaturedTiles = async () => {
   return (
     <section className="max-w-7xl mx-auto px-4 py-16">
 
-      {/* Title */}
+     
       <h2 className="text-3xl font-bold mb-10 text-center">
         Featured Tiles
       </h2>
 
-      {/* Grid */}
+    
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
 
         {featured.map((tile) => (

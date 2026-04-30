@@ -9,7 +9,7 @@ const TilesCard = ({tile}) => {
             className="group border rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition duration-300"
           >
 
-            {/* Image */}
+            
             <div className="relative w-full h-48 overflow-hidden">
               <Image
                 src={tile.image}
@@ -19,7 +19,7 @@ const TilesCard = ({tile}) => {
               />
             </div>
 
-            {/* Content */}
+        
             <div className="p-4">
               <h3 className="font-semibold text-lg group-hover:text-black">
                 {tile.title}
@@ -33,7 +33,7 @@ const TilesCard = ({tile}) => {
                 ${tile.price}
               </p>
 
-              {/* Button (fixed: no button inside Link issue) */}
+              
               <Link
                 href={`/all-tiles/${tile.id}`}
                 className="mt-4 inline-block w-full text-center bg-black text-white py-2 rounded-md hover:bg-gray-800 transition"
