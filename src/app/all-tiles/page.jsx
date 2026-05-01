@@ -1,4 +1,6 @@
 import TilesCard from '@/components/TilesCard'
+import { Button, Input } from '@heroui/react'
+import { Search } from 'lucide-react'
 import React from 'react'
 
 const AllTiles = async () => {
@@ -25,6 +27,15 @@ const AllTiles = async () => {
         <p className="text-gray-500 mt-2">
           Discover modern, creative and premium tile collections
         </p>
+      </div>
+
+      <div className='flex items-center justify-center '>
+      <div className='flex gap-4 mb-6'>
+          <Input placeholder='Search Title ' className={'w-full h-full border border-gray-300'}/>
+        <Button variant='outline'>
+            <Search/>
+        </Button>
+      </div>
       </div>
 
     

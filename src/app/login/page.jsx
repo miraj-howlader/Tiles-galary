@@ -1,5 +1,6 @@
 'use client'
 
+import { authClient } from '@/lib/auth-client';
 import {
   Button,
   Card,
@@ -13,14 +14,30 @@ import {
   TextField
 } from '@heroui/react'
 import React from 'react'
+import toast from 'react-hot-toast';
 import { FcGoogle } from "react-icons/fc";
 
 const LoginPage = () => {
-  const handleSubmit = (e) => {
+
+
+  const handleSubmit =async (e) => {
     e.preventDefault()
+    const email = e.target.email.value 
+    const password = e.target.password.value 
+    const {data,error} = await authClient.signIn.email({
+      email,password,
+      callbackURL:'/'
+    })
+    if(!error){
+      toast.success('User logged in successfully')
+    }
   }
 
-  const handleGoogle = () => {}
+  const handleGoogle = async () => {
+    await authClient.signIn.social({
+      provider:'google'
+    })
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 px-4">
@@ -34,12 +51,12 @@ const LoginPage = () => {
           </p>
         </div>
 
-        {/* Form */}
+        
         <Form
           className="flex flex-col gap-5"
           onSubmit={handleSubmit}
         >
-          {/* Email */}
+        
           <TextField
             isRequired
             name="email"
@@ -59,7 +76,7 @@ const LoginPage = () => {
             <FieldError />
           </TextField>
 
-          {/* Password */}
+          
           <TextField
             isRequired
             minLength={8}

@@ -1,4 +1,4 @@
-import { Chip } from '@heroui/react'
+
 import Image from 'next/image'
 import React from 'react'
 
@@ -11,7 +11,7 @@ const TilesDetailsPage = async ({params}) => {
 
     
   return (
-      <div className="max-w-6xl mx-auto px-4 py-10 border mt-14">
+      <div className="max-w-6xl mx-auto px-4 py-10 border mt-14 mb-34">
       <div className="grid md:grid-cols-2 gap-10 items-start">
         
         

@@ -1,5 +1,6 @@
 'use client'
 
+import { authClient } from '@/lib/auth-client'
 import {
   Button,
   Card,
@@ -11,11 +12,27 @@ import {
   Label,
   TextField
 } from '@heroui/react'
+import { useRouter } from 'next/navigation'
 import React from 'react'
+import toast from 'react-hot-toast'
 
 const SigninPage = () => {
-  const handleSubmit = (e) => {
+  const router = useRouter()
+  const handleSubmit =async (e) => {
     e.preventDefault()
+    const name = e.target.name.value 
+    const email = e.target.email.value 
+    const password = e.target.password.value 
+    const image = e.target.image.value 
+
+    const {data,error}=await authClient.signUp.email({
+     name,email,password,image
+    })
+    if(error){
+      toast.error('error with signupage')
+    }else{
+      router.push('/login')
+    }
   }
 
   return (
@@ -23,7 +40,7 @@ const SigninPage = () => {
       
       <Card className="w-full max-w-md p-8 rounded-2xl shadow-xl border border-gray-200 bg-white">
 
-        {/* Header */}
+        
         <div className="text-center mb-6">
           <h1 className="text-3xl font-bold">Create Account 🚀</h1>
           <p className="text-gray-500 text-sm mt-1">
@@ -31,7 +48,7 @@ const SigninPage = () => {
           </p>
         </div>
 
-        {/* Form */}
+        
         <Form className="flex flex-col gap-5" onSubmit={handleSubmit}>
 
           <TextField isRequired name="name" type="text">
