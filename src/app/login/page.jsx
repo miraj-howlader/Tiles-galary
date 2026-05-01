@@ -43,7 +43,7 @@ const LoginPage = () => {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 px-4">
       <Card className="w-full max-w-md p-8 rounded-2xl shadow-xl border border-gray-200 bg-white">
         
-        {/* Header */}
+       
         <div className="text-center mb-6">
           <h1 className="text-3xl font-bold">Welcome Back 👋</h1>
           <p className="text-gray-500 text-sm mt-1">
